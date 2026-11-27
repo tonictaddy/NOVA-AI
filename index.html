@@ -62,7 +62,7 @@ function speak(s,force=false){
   // On Safari, cancelling and immediately speaking can silently lose an utterance.
   try{speechSynthesis.cancel()}catch(e){}
   const u=new SpeechSynthesisUtterance(latestSpokenText);
-  utteranceHold=u.lang='en-GB';u.rate=1;u.pitch=1;
+  utteranceHold=utteranceHold=u;u.lang='en-GB';u.rate=1;u.pitch=1;
   const voices=speechSynthesis.getVoices();
   https://github.com/tonictaddy/NOVA-AI/edit/main/index.html
   if(candidate)u.voice=candidate;
