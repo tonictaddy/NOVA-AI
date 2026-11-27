@@ -64,7 +64,7 @@ function speak(s,force=false){
   const u=new SpeechSynthesisUtterance(latestSpokenText);
   utteranceHold=u.lang='en-GB';u.rate=1;u.pitch=1;
   const voices=speechSynthesis.getVoices();
-  const candidate=voices.find(v=>/male|daniel|aaron|alex|david/i.test(v.name)&&/^en/i.test(v.lang))||voices.find(v=>/^en/i.test(v.lang));
+  https://github.com/tonictaddy/NOVA-AI/edit/main/index.html
   if(candidate)u.voice=candidate;
   let settled=false;
   const done=()=>{if(settled||token!==speechToken)return;settled=true;speakingNow=false;utteranceHold=null;$('voicecard').classList.remove('speaking');updateVoiceStatus(sessionActive?'Waiting for your next question…':'Tap the microphone to start a conversation');queueListening()};
